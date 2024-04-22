@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const initialState = cookieToInitialState(config, headers().get("cookie"));
+  console.log("XXXXXX", initialState);
   return (
     <html lang="en">
       <body>

@@ -5,18 +5,19 @@ import type { ReactNode } from "react";
 import { type State, WagmiProvider } from "wagmi";
 
 import { config } from "./config";
+import Web3ModalProvider from "../context";
 
 type Props = {
   children: ReactNode;
   initialState: State | undefined;
 };
 
-const queryClient = new QueryClient();
-
 export function Providers({ children, initialState }: Props) {
   return (
     <WagmiProvider config={config} initialState={initialState}>
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+      <Web3ModalProvider initialState={initialState}>
+        {children}
+      </Web3ModalProvider>
     </WagmiProvider>
   );
 }
