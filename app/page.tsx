@@ -11,6 +11,8 @@ export default function ConnectButton() {
       <button onClick={() => open({ view: "Networks" })}>
         Open Network Modal
       </button>
+      <h1>André Santin</h1>
+      <h3>Web Developer</h3>
     </>
   );
 }

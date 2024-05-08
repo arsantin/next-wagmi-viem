@@ -9,7 +9,12 @@ export default function Layout({ children }: { children: ReactNode }) {
   console.log("XXXXXX", initialState);
   return (
     <html lang="en">
-      <body>
+      <body
+        style={{
+          backgroundSize: "cover",
+          backgroundImage: `url("./coder.png")`,
+        }}
+      >
         <Providers initialState={initialState}>{children}</Providers>
       </body>
     </html>
