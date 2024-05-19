@@ -1,5 +1,6 @@
 "use client";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { EmailTemplate } from "../components/email";
 
 export default function ConnectButton() {
   // 4. Use modal hook
@@ -13,6 +14,7 @@ export default function ConnectButton() {
       </button>
       <h1>André Santin</h1>
       <h3>Web Developer</h3>
+      <EmailTemplate firstName="santin" />
     </>
   );
 }
